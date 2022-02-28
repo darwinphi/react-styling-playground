@@ -7,6 +7,7 @@ const AppWrapper = styled.div`
 `;
 
 const AppLogo = styled.img`
+  background: ${(props) => (props.bgColor == "primary" ? "palevioletred" : "")};
   height: 40vmin;
   pointer-events: none;
   animation: App-logo-spin infinite 20s linear;
@@ -40,7 +41,7 @@ function App() {
   return (
     <AppWrapper>
       <AppHeader>
-        <AppLogo src={logo} />
+        <AppLogo src={logo} bgColor="" />
         <p>Hello Vite + React!</p>
         <p>
           <AppButton onClick={() => setCount((count) => count + 1)}>
